@@ -1,4 +1,4 @@
-// Early access sign-ups go to Formspree. Without JavaScript the form still posts normally.
+// Early access sign-ups go to the "Lamp" form in Kit. Without JavaScript the form still posts normally.
 (function () {
   const form = document.getElementById('early-form');
   const status = document.getElementById('early-status');
@@ -11,7 +11,8 @@
     status.textContent = 'Sending…';
     try {
       const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-      if (!res.ok) throw new Error(String(res.status));
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || (data.status && data.status !== 'success')) throw new Error(String(res.status));
       form.hidden = true;
       status.textContent = 'You are on the list. I will email you when Lamp is ready.';
     } catch {
