@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lamp: make a wish, your AI team builds it</title>
+  <meta name="description" content="Lamp is a desktop app where an AI Analyst, Developer and QA turn what you ask for into a tested pull request. You only approve it.">
+  <meta property="og:title" content="Lamp: make a wish, your AI team builds it">
+  <meta property="og:description" content="Describe what you want. An AI Analyst, Developer and QA build it, test it and hand you one pull request to approve.">
+  <meta property="og:image" content="https://herbertph.github.io/lamp-landing/assets/og.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#17163A">
+  <link rel="icon" href="assets/lamp.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,100&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#" aria-label="Lamp home">
+      <svg class="brand-mark" viewBox="0 0 64 40" aria-hidden="true"><use href="#lamp"></use></svg>
+      <span>Lamp</span>
+    </a>
+    <nav aria-label="Page">
+      <a href="#film">Film</a>
+      <a href="#how">How it works</a>
+      <a href="#inside">What you get</a>
+      <a class="nav-cta" href="#early">Early access</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero: the lamp, its smoke, and the wish -->
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Make a wish. Your AI team makes it real.</h1>
+        <p class="lede">Lamp is a desktop app with a software team inside. Tell the Analyst what you want in plain words; the Developer builds it, QA tests it and sends back every bug, and you get one pull request to approve.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brass" href="#film">Watch the 45-second film</a>
+          <a class="btn btn-quiet" href="#early">Get early access</a>
+        </div>
+        <p class="fine">Runs on your computer, with your own Claude or OpenCode plan and your own GitHub.</p>
+      </div>
+
+      <figure class="lamp-scene" aria-hidden="true">
+        <svg class="smoke" viewBox="0 0 420 520" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="smokeGrad" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#F6D27A" stop-opacity=".9"/>
+              <stop offset=".45" stop-color="#CBC5EE" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#CBC5EE" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(58 6)">
+          <path class="wisp w1" d="M318 452 C 300 400, 360 372, 330 318 S 250 250, 292 196 S 380 120, 318 40" />
+          <path class="wisp w2" d="M322 452 C 342 410, 290 380, 312 330 S 372 262, 330 214 S 262 140, 300 70" />
+          <path class="wisp w3" d="M316 452 C 296 420, 330 396, 306 356 S 262 300, 288 262" />
+          </g>
+        </svg>
+        <div class="wish-card">
+          <span class="wish-who">Pull request #8 is ready for you</span>
+          <strong>Mark tasks as done</strong>
+          <span class="wish-meta">22 tests passed, 1 bug found and fixed</span>
+        </div>
+        <svg class="lamp-big" viewBox="0 0 64 40"><use href="#lamp"></use></svg>
+        <div class="glow"></div>
+      </figure>
+    </section>
+
+    <!-- The film -->
+    <section class="film" id="film">
+      <div class="film-head">
+        <h2>Watch a wish come true</h2>
+        <p>A request goes from one sentence to a tested pull request while the team passes the work between them.</p>
+      </div>
+      <div class="film-frame">
+        <video controls preload="metadata" playsinline poster="assets/film-poster.jpg">
+          <source src="assets/lamp-film.mp4" type="video/mp4">
+          Your browser cannot play this video. <a href="assets/lamp-film.mp4">Download the film</a>.
+        </video>
+      </div>
+    </section>
+
+    <!-- How it works: a real sequence, so it is numbered -->
+    <section class="how" id="how">
+      <h2>From a wish to a pull request</h2>
+      <ol class="steps">
+        <li>
+          <h3>You make the wish</h3>
+          <p>Write what you want, the way you would say it to a colleague. No prompts, no terminal.</p>
+        </li>
+        <li>
+          <h3>The Analyst writes the spec</h3>
+          <p>It asks you when something is unclear, then writes requirements with numbered acceptance criteria.</p>
+        </li>
+        <li>
+          <h3>The Developer builds it</h3>
+          <p>On its own branch, in the style your code already uses, with tests next to the change.</p>
+        </li>
+        <li>
+          <h3>QA tests everything</h3>
+          <p>Test cases, Playwright automation and a code review. Every failure becomes a GitHub issue and goes back to the Developer until it passes.</p>
+        </li>
+        <li>
+          <h3>You approve one pull request</h3>
+          <p>Nothing reaches you until QA says it is ready. Read it, approve it, done.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- What you get: varied rows, not a card grid -->
+    <section class="inside" id="inside">
+      <h2>A team that is yours to shape</h2>
+      <div class="inside-grid">
+        <div class="feature feature-wide">
+          <h3>Any AI for any role</h3>
+          <p>Run the Analyst on Claude Opus and the Developer on DeepSeek, Kimi or GLM through your OpenCode plan. Lamp passes the work between them, and you see who is working, who is waiting and who is next.</p>
+          <ul class="chips" aria-label="Models you can use">
+            <li>Claude</li><li>DeepSeek</li><li>Kimi</li><li>GLM</li><li>Sonnet</li>
+          </ul>
+        </div>
+        <div class="feature">
+          <h3>Skills and rules per member</h3>
+          <p>Edit each member's instructions, and add skills from a GitHub link, a file, or your own words.</p>
+        </div>
+        <div class="feature">
+          <h3>Many wishes at once</h3>
+          <p>Each task gets its own team and its own copy of the code, so a feature and a quick fix can run side by side.</p>
+        </div>
+        <div class="feature">
+          <h3>Your machine, your accounts</h3>
+          <p>Lamp runs locally with your Claude Code, OpenCode and GitHub sign-ins. Your code never goes through our servers.</p>
+        </div>
+        <div class="feature">
+          <h3>In your pocket too</h3>
+          <p>Check progress and approve from your phone over a private connection to your computer.</p>
+        </div>
+      </div>
+      <blockquote class="maker">
+        <p>Built by a QA lead. Speed is easy now; knowing that something is actually done is the hard part. That is why nothing reaches you until QA says it is ready.</p>
+        <footer>Herbert Parasio, creator of Lamp</footer>
+      </blockquote>
+    </section>
+
+    <!-- Early access -->
+    <section class="early" id="early">
+      <svg class="early-lamp" viewBox="0 0 64 40" aria-hidden="true"><use href="#lamp"></use></svg>
+      <h2>Lamp is in early access</h2>
+      <p>The first version is being tested on real projects right now. Windows and Mac versions are on the way.</p>
+      <div id="early-action"></div>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <span>© 2026 Lamp</span>
+    <span>Works with Claude Code, OpenCode and GitHub. Not affiliated with Anthropic, OpenCode or GitHub.</span>
+  </footer>
+
+  <!-- The lamp drawing, reused across the page -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F6D27A"/>
+        <stop offset=".55" stop-color="#E3A83E"/>
+        <stop offset="1" stop-color="#A86F1E"/>
+      </linearGradient>
+      <symbol id="lamp" viewBox="0 0 64 40">
+        <path d="M13 21.5c-5.5-1.8-9.8 1-9 4.6.8 3.4 5.4 3.6 8.4 1.6" fill="none" stroke="url(#brass)" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M12 24c0-6 8-9.5 18-9.5 8.8 0 14 2.4 16.5 6.2L58.5 14c1.6-.9 3 .6 2 2L50.5 28.2C47.6 31.3 40.5 33 30 33 19 33 12 29.6 12 24Z" fill="url(#brass)"/>
+        <path d="M22.5 14.8c1.4-4.6 4.4-7 7.5-7s6.1 2.4 7.5 7" fill="url(#brass)"/>
+        <circle cx="30" cy="6.2" r="2.2" fill="url(#brass)"/>
+        <rect x="21" y="32.5" width="18" height="4.5" rx="2.2" fill="url(#brass)"/>
+        <path d="M17 21.5c3.5-2.4 8.4-3.4 13-3.4" fill="none" stroke="#FFF3CF" stroke-opacity=".65" stroke-width="1.6" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="site.js"></script>
+</body>
+</html>
