@@ -150,8 +150,15 @@
     <section class="early" id="early">
       <svg class="early-lamp" viewBox="0 0 64 40" aria-hidden="true"><use href="#lamp"></use></svg>
       <h2>Lamp is in early access</h2>
-      <p>The first version is being tested on real projects right now. Windows and Mac versions are on the way.</p>
-      <div id="early-action"></div>
+      <p>The first version is being tested on real projects right now. Leave your email and you will hear from me when Lamp is ready for Windows and Mac.</p>
+      <form class="early-form" id="early-form" action="https://formspree.io/f/xaeqrrkz" method="POST">
+        <input type="hidden" name="_subject" value="Lamp early access">
+        <input type="hidden" name="source" value="lamp-landing">
+        <label class="visually-hidden" for="early-email">Email</label>
+        <input id="early-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        <button class="btn btn-brass" type="submit">Join early access</button>
+      </form>
+      <p class="early-status" id="early-status" role="status" aria-live="polite"></p>
     </section>
   </main>
 
